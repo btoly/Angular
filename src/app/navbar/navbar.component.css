@@ -1,0 +1,34 @@
+@media (min-width: 990px) {
+
+  .navbar-brand {
+
+  position: absolute;
+  
+  left: 50%;
+  
+  transform: translateX(-50%);
+  
+  /**optional offset from top**/
+  
+  top: 2%;
+
+  
+  }
+  strong{
+    color: white;
+  }
+  
+  }
+
+
+  
+
+
+  img {
+    /* border-radius: 50%; */
+    width: 200px; 
+    height: 100x; 
+    background: white;
+  
+  
+  }  

@@ -1,0 +1,64 @@
+
+
+
+
+<br><br>  
+  
+<div class="row">  
+  <div class="col-md-12">
+        <form [formGroup]="form" #searchInfo (ngSubmit)="searchForm(searchInfo)">  
+            <table>  
+                <tr>  
+                    <td> <input   type="text" formControlName="name" placeholder="  هوية الموظف" class="form-control" style="text-align:center;"> </td>   
+                    <td><button class="btn btn-primary hidden-xs">بحث</button></td>  
+                </tr>  
+            </table>  
+        </form>  
+    </div>  
+</div>  
+
+<div class="row">  
+  <div class="col-md-12">
+
+<a class="btn " (click)="createaddCpmpany()">  <i class="fa fa-plus" aria-hidden="true"></i>  </a>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th> الهوية الوطنية</th>
+
+          <th>المزيد</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let companys of company">
+          <td>{{companys.username}}</td>
+
+  
+          <td>
+            <button type="button" class="btn btn-primary" (click)="viewProfiles(companys.id)"> التفاصيل </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+<app-display *ngIf="action === 'view'"[Copanytion]="selectedCompany" (ProfileDeletedEvent)="refreshData()" ></app-display>
+    
+<app-add-experience *ngIf="action === 'edit'" [companys]="selectedCompany" (companyAddedEvent)="refreshData()"></app-add-experience>
+
+
+<app-add-experience *ngIf="action === 'add'" [companys]="selectedCompany" (companyAddedEvent)="refreshData()" > </app-add-experience>
+
+
+
+
+
+
+
+
+
+
+

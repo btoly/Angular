@@ -1,0 +1,33 @@
+
+<form>
+  <label for="author">:هوية الموظف</label>
+  <input type="text" class="form-control" id="username"   name="username" [(ngModel)]="companys.username" >
+
+  <label for="author"> :عدد سنوات الخبرة</label>
+  <input type="text" class="form-control" id="comanyName"  name="comanyName" [(ngModel)]="companys.comanyName" >
+
+
+
+  <label for="author">:تاريخ الخبرة</label>
+  <input type="date" class="form-control" id="StartDate" placeholder=" مثال 2/2/2000" name="StartDate" [(ngModel)]="companys.startDate" >
+
+  <label for="author">:نهاية الخيرة</label>
+  <input type="date" class="form-control" id="EndDate"  name="EndDate" placeholder=" مثال 2/2/2000"  [(ngModel)]="companys.endDate" >
+
+
+
+
+  <label for="author">: المسمى الوظيفي</label>
+  <input type="text" class="form-control" id="e_position"  name="e_position" [(ngModel)]="companys.e_position">
+
+
+
+  <!-- <div class="form-group" *ngIf="companys.id == null">
+
+    <br>
+    <input type="file" (change)="onFileChanged($event)">
+    <img [src]="imgURL" height="200" width="200" *ngIf="imgURL">
+  </div> -->
+  <br><br>
+  <button type="button" class="btn btn-success" (click)="savecompany()">حفظ </button>
+</form>

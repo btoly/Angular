@@ -1,0 +1,34 @@
+<h1>profile Details</h1>
+
+<table>
+    <tr>
+        <td>profile Id</td>
+        <td>{{profile.id}}</td>
+    </tr>
+    <tr>
+        <td>profile Name</td>
+        <td>{{profile.name}}</td>
+    </tr>
+  
+    <tr>
+        <td>profile NationalIdentity</td>
+        <td>{{profile.nationalIdentity}}</td>
+    </tr>
+
+    <tr>
+        <td>profile Universitytype</td>
+        <td>{{profile.universitytype}}</td>
+    </tr>
+
+
+
+
+
+
+</table>
+<br>
+<img src="{{profile.retrievedImage}}" height="200" width="200">
+<br><br>
+
+<a class="btn btn-small btn-danger" (click)="deleteProfile()"><i class="fas fa-trash"></i></a>
+<a class="btn btn-small btn-warning" (click)="editProfile()">edit</a> 

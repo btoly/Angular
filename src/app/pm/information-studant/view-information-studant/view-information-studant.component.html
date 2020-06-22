@@ -1,0 +1,49 @@
+
+
+<br><br>  
+  
+<div *ngIf=certification>
+    <div class="row">  
+        <div class="col-md-12">
+<table >
+<!--   
+    <tr>
+
+        <td>{{certification.universityname}}</td>
+        <td>:إسم الجامعة</td>
+    </tr> -->
+
+    <tr>
+
+        <td>{{certification.gap}}</td>
+        <td> :معدل</td>
+    </tr>
+
+    <tr>
+
+        <td>{{certification.magor}}</td>
+        <td> :التخصص</td>
+    </tr>
+
+    <tr>
+   
+        <td>{{certification.degree}}</td>
+        <td> :درجة العلمية</td>
+    </tr>
+    <tr>
+
+        <td>{{certification.date}}</td>
+        <td>  :تاريخ التخرج</td>
+    </tr>
+<tr>
+    <td><img src="{{certification.retrievedImage}}" height="200" width="200"></td>
+<td>  : شهادة</td>
+</tr>
+</table>
+<br><br>
+
+<a class="btn btn-small btn-danger" (click)="deleteCertification()"> <i class="fas fa-trash"></i> </a>
+<a class="btn btn-small btn-warning" (click)="editCertification()"><i class="fa fa-pencil-square" aria-hidden="true"></i></a> 
+
+
+</div></div></div>

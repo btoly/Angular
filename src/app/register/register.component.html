@@ -1,0 +1,309 @@
+
+<pre> 
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+  
+</pre>
+
+<div class="jumbotron vertical-center" >
+<div *ngIf="isSignedUp; else signupForm">
+تم التسجيل بنجاح ! 
+  </div>
+  
+  <ng-template #signupForm>
+  
+  <form name="form"  (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
+  
+  
+  <br>
+  
+  <div class="container py-6">
+  <div class="row">
+  <div class="mx-auto col-sm-12">
+  <p class="text-right">
+    الخطوة الأولى - إنشاء البيانات الرئيسية لمقدم الطلب
+  </p>
+  <hr>
+  
+  <div class="card   text-right">
+  <div class="card-header">
+  <h3>
+  البيانات التعريفية
+  </h3>
+  </div>
+  
+  <div class="card-body">
+  <div class="form-row">
+  <div class="form-group col-md-6">
+  <label for="birthday">تاريخ الميلاد</label>
+  <br>
+  <input type="date" id="birthday" name="birthday"><br><br>
+  </div>
+  <br> 
+  
+  
+  
+  
+  <div class="form-group col-md-6">
+  <div class="form-group">
+      <label for="username">  رقم بطاقة الأحوال </label>
+      <input type="text" class="form-control" name="username" [(ngModel)]="form.username" #username="ngModel"
+      required
+
+      inputmode="numeric" maxlength="10" pattern="[0-9]*"
+      
+      />
+       <div  class="alert-danger" *ngIf="f.submitted && username.invalid">
+      <div *ngIf="username.errors.required">الهوية الوطنية مطلوب ادخالها   </div>
+      <div *ngIf="username.errors.minlength">
+      يجب ان تكون الهوية الوطنيية تساوي عشر اقام
+      </div>
+      </div>
+      </div>
+    </div>
+  
+  
+  
+    <div class="form-group col-md-6">
+  <div class="form-group">
+  <label for="father_Name">الأب  </label>
+  <input type="text" class="form-control" name="father_Name"  [(ngModel)]="form.father_Name" #father_Name="ngModel" required />
+  <div   class="alert-danger"  *ngIf="f.submitted && father_Name.invalid">
+  <div *ngIf="father_Name.errors.required">إسم الاب مطلوب ادخالها </div>
+  </div>
+  </div>
+  
+  
+</div>
+  
+  
+    
+<div class="form-group col-md-6">
+  <div class="form-group">
+  <label for="name">  الاسم الأول </label>
+  <input type="text" class="form-control"  id="name" name="name" [(ngModel)]="form.name" #name="ngModel" required />
+  <div   class="alert-danger"  *ngIf="f.submitted && name.invalid">
+  <div *ngIf="name.errors.required"> الاسم الأول  مطلوب ادخالها </div>
+  </div>
+  </div>
+</div>
+  
+
+
+  
+<!-- 
+<div class="form-group">
+  <label for="select_role"> إختار الجهة  </label>
+  <input type="text" class="form-control"  id="select_role" name="select_role" [(ngModel)]="form.select_role" #select_role="ngModel" required />
+
+  </div>  -->
+
+  
+  
+<div class="form-group col-md-6">
+  <div class="form-group">
+  <label for="grandfather_name">  الجد </label>
+  <input type="text" class="form-control" name="grandfather_name"  [(ngModel)]="form.grandfather_name" #grandfather_name="ngModel" required />
+  <div   class="alert-danger"  *ngIf="f.submitted && grandfather_name.invalid">
+  <div   class="alert-danger"  *ngIf="grandfather_name.errors.required">إسم الجد مطلوب ادخالها </div>
+  </div>
+  </div>
+</div>
+  
+<div class="form-group col-md-6">
+  <div class="form-group">
+  <label for="last_name">العائلة </label>
+  <input type="text" class="form-control" name="last_name"  [(ngModel)]="form.last_name" #last_name="ngModel" required />
+  <div   class="alert-danger"  *ngIf="f.submitted && last_name.invalid">
+  <div   class="alert-danger"  *ngIf="last_name.errors.required">اسم العائلة مطلوب ادخالها </div>
+  </div>
+  </div>  </div>
+
+  
+  
+  <br>
+  </div>
+  
+  
+  
+  <!-- <strong>الجنس</strong>
+  <br>
+  <div class="form-check form-check-inline">
+  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="a" checked>
+  <label class="form-check-label" for="exampleRadios1">
+  أنثى
+  </label>
+  
+  <div class="form-check form-check-inline">
+  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="b">
+  <label class="form-check-label" for="exampleRadios2">
+  ذكر
+  </label>
+  </div> -->
+  
+  
+  
+  </div>
+  <!-- //end row -->
+  </div>
+  
+  <!-- //end card-body -->
+  
+  </div> 
+  
+  <!--   end container py-6 -->
+  
+  
+  </div> 
+  <!--  end row -->
+  
+  
+  </div> 
+  <!-- end  mx-auto col-sm-12 -->
+  
+
+  <!-- end card   text-right -->
+  
+  
+  <br>
+  
+  <div class="card text-right">
+  <div class="card-header">
+  <h3>
+  بيانات الإتصال
+  </h3>
+  </div>
+  <!--   end card-header-->
+  <div class="card-body">
+  <br>
+  
+  
+  
+  <div class="form-group">
+  <label for="email"> البريد الإلكتروني </label>
+  <input
+  type="email"
+  class="form-control"
+  name="email"
+  [(ngModel)]="form.email"
+  required
+  
+  #email="ngModel"
+  />
+  <div class="alert-danger" *ngIf="f.submitted && email.invalid">
+  <div *ngIf="email.errors.required">مطلوب ادخال البريد الإلكتروني  </div>
+  <div *ngIf="email.errors.email">
+يجب ادخال   البريد الإلكتروني صالح
+  </div>
+  </div>
+  </div>
+  
+  
+  
+  
+  
+  <div class="form-group">
+  <label for="phone">رقم الجوال </label>
+  <input type="number" class="form-control"   name="phone" [(ngModel)]="form.phone" #phone="ngModel"
+  required           inputmode="numeric" maxlength="10" pattern="[0-9]*" />
+  <div class="alert-danger" *ngIf="f.submitted && phone.invalid">
+      <div *ngIf="phone.errors.required">رقم الجوال مطلوب ادخالها  </div>
+      <div *ngIf="phone.errors.minlength">
+  يجب ان يكون عشر ارقام فقط
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  
+  
+  </div>
+  
+  </div>
+  <br>
+
+  
+  
+  
+  <div class="card text-right">
+      <div class="card-header">
+      <h3>
+      بيانات الدخول
+      </h3>
+      </div>
+    <!--   end card-header-->
+    <div class="card-body">
+  
+      <div class="form-group">
+          <label for="password">كلمة المرور</label>
+          <input
+          type="password"
+          class="form-control"
+          name="password"
+          [(ngModel)]="form.password"
+          required
+          minlength="6"
+          #password="ngModel"
+        />
+        <div class="alert-danger" *ngIf="f.submitted && password.invalid">
+          <div *ngIf="password.errors.required">مطلوب ادخال كلمة المرور</div>
+          <div *ngIf="password.errors.minlength">
+      يجب ان تكون اكثر من ست خانات
+          </div>
+        </div>
+      </div>
+
+      
+      
+      
+      <br>
+
+
+
+ <div class="form-group">
+<label for="confirmPassword">تأكيد كلمة المرور</label>
+<input  class="form-control" 
+type="password" 
+name="confirmPassword"
+  [(ngModel)]="form.confirmPassword"
+  required
+  minlength="6"
+  #confirmPassword="ngModel"
+/>
+                                    
+      <div  class="alert-danger"  *ngIf="confirmPassword.valid && confirmPassword.value != password.value"  >
+     ليس متطابقة
+      </div>
+    </div>
+    
+    <!--   end card-body-->
+    </div>
+    
+  </div>
+  
+  
+    <div class="form-group">
+      <button class="btn  "> تسجيل</button>
+    </div>
+  
+    <div class="alert alert-warning" *ngIf="f.submitted && isSignUpFailed">
+   فشل التسجيل!<br />{{ errorMessage }}
+    </div>
+  </form>
+  
+  </ng-template>
+</div>

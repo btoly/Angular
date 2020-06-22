@@ -1,0 +1,80 @@
+
+
+<pre>
+
+
+
+ 
+
+
+
+  
+
+  
+</pre>
+<a href="registeradmain" class="float-right">   اضافه قطاع جديد </a>
+
+
+<div class="container row">
+    <div   class="col-md-6">
+    <table class="table">
+      <thead>
+
+      <tr>
+
+      <th> إسم جهة التعليم</th>
+
+      <th> رقم جهة التعليم  </th>
+      <th> المزيد </th>
+    </tr>
+
+
+    </thead>
+    <tbody> 
+
+
+      <tr *ngFor="let SignUpInfo of users | paginate: { itemsPerPage: 3, currentPage: cp,    totalItems: total  }">
+                 
+        <ng-template [ngIf]="isRoleindividuals(SignUpInfo)">
+    
+   
+
+     
+  
+
+      
+
+          <td>{{SignUpInfo.name}}</td>
+          <td>{{SignUpInfo.username}}</td>
+  
+  
+    <td><button type="button" class="btn btn-primary" (click)="viewUser(SignUpInfo.id)">المزيد</button></td>
+  
+  </ng-template>
+      </tr>
+  
+  
+  
+  
+      </tbody>
+    </table>
+    
+  
+  
+    <pagination-controls (pageChange)="cp = $event"
+    
+    previousLabel="السابق"
+                        nextLabel="التالي"
+    
+    ></pagination-controls>
+  
+  
+    <div class="col-md-6">
+   <app-user-details  *ngIf="action === 'view'" [user]="selectedUser" (userDeletedEvent)="refreshData()"></app-user-details>
+   <app-edit-user   *ngIf="action === 'edit'" [user]="selectedUser" (AddedEvent)="refreshData()" ></app-edit-user>  
+  
+      </div>
+  </div>
+  </div> 
+  
+   

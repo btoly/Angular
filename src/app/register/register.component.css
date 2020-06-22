@@ -1,0 +1,97 @@
+@import url("http://www.fontstatic.com/f=jooza");
+@import url("http://www.fontstatic.com/f=cocon-next-arabic");
+
+
+
+p{
+
+    color: #003366;
+    font-size: 25px;
+    margin-top: 0.25em;
+    margin-bottom: 1em;
+    margin-left: 5;
+    margin-right: 0;
+    font-weight: bold;
+    font-family: 'cocon-next-arabic';
+}
+
+
+
+
+.card-header{
+    background-color:#eaecea;
+
+}
+
+h3{
+    color:#dd9c1e;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+label {
+    color: #003366;
+    font-size: 15px;
+  }
+.text{
+    color: #ce8dc0;
+    font-size: 15px;
+    margin-top: 0.25em;
+    margin-bottom: 1em;
+    margin-left: 5;
+    margin-right: 0;
+    font-weight: bold;
+    font-family: 'cocon-next-arabic';
+}
+
+
+
+
+
+input[type=text] {
+  font-size: 15px;
+    border: none;
+    border-bottom: 2px solid #B8860B;
+      background-color:#f7f7f7;
+  }
+
+
+input[type=email] {
+  font-size: 15px;
+  border: none;
+  border-bottom: 2px solid #B8860B;
+    background-color:#f7f7f7;
+}
+  input[type=number] {
+    font-size: 15px;
+    border: none;
+    border-bottom: 2px solid #B8860B;
+      background-color:#f7f7f7;
+  }
+
+  input[type=password] {
+    font-size: 15px;
+    border: none;
+    border-bottom: 2px solid #B8860B;
+    background-color:#f7f7f7;
+  }
+    
+  error-message{
+
+    background-color:#e02121;
+    color: #e02121;
+
+  }
+  button{
+
+ float: left;
+    background-color:#479fd5;
+    display: flex;
+    flex-direction: row-reverse;
+    display:      block;
+ 
+
+    right: 0;
+
+  
+  }

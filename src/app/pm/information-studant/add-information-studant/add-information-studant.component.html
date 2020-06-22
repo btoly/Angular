@@ -1,0 +1,35 @@
+
+<form>
+  <label for="author">هوية الوطنية</label>
+  <input type="text" class="form-control" id="username"  name="username" [(ngModel)]="certification.username" >
+
+  <!-- <label for="author">اسم الجامعة</label>اسم الجامعة
+  <input type="text" class="form-control" id="nuniversitynameame"  name="universityname" [(ngModel)]="certification.universityname" >
+ -->
+
+
+  <label for="author">تاريخ التخرج</label>
+  <input type="date" class="form-control" id="date"  name="adddateby" [(ngModel)]="certification.date" >
+
+  <label for="author">المعدل</label>
+  <input type="number" class="form-control" id="gap"  name="gap" [(ngModel)]="certification.gap" >
+
+
+
+  <label for="author">التخصص</label>
+  <input type="text" class="form-control" id="magor"  name="magor" [(ngModel)]="certification.magor">
+
+
+  <label for="author">درجة العملية</label>
+  <input type="text" class="form-control" id="degree" name="degree" [(ngModel)]="certification.degree">
+
+
+  <div class="form-group" *ngIf="certification.id == null">
+    <!-- only show this field on adding a book -->
+    <br>
+    <input type="file" (change)="onFileChanged($event)">
+    <img [src]="imgURL" height="200" width="200" *ngIf="imgURL">
+  </div>
+  <br><br>
+  <button type="button" class="btn btn-success" (click)="saveProfile()">حفظ </button>
+</form>

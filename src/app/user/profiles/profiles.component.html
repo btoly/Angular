@@ -1,0 +1,108 @@
+<br>
+<div class="btn-group-vertical float-right"> 
+
+  
+  <button type="button"  
+  class="btn btn-outline-success " 
+  (click)="getDetails()" >
+ <i class="fa fa-graduation-cap" 
+  aria-hidden="true"></i>
+ </button>
+
+ 
+  <br>
+  <br>
+  <button type="button" class="btn btn-outline-success" 
+  (click)="getDetailsCompany()" >
+    <i class="fa fa-briefcase"
+     aria-hidden="true">
+    </i>
+  </button>
+  <br>
+  <br>
+
+  <button type="button" class="btn btn-outline-success " >
+  <i class="fa fa-certificate" aria-hidden="true"></i>
+</button>
+
+</div>
+
+
+
+
+<div class="container row" 
+*ngIf="isEmpty()  && educationCounter " > 
+<div class="col-md-12">
+    <h1 > تعليمي</h1>
+    <table class="table">
+      <thead>
+<tr class="table-success">
+     
+          <th> معدل</th>
+          <th> تخصص</th>
+          <th> درجة التعليم</th>
+       
+
+          <th> اضافة بواسطة </th>
+          <th>  تاريخها </th>
+          <th> وثيقة الشهادة </th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let cert of certificateList">
+        <tr>
+
+          <td>{{cert.gap}}</td>
+          <td>{{cert.magor}}</td>
+          <td>{{cert.degree}}</td>
+
+          <td>{{cert.addby}}</td>
+          <td>{{cert.date}}</td>
+          <td>
+
+            <br>
+<img src="{{cert.retrievedImage}}" height="200" width="200">
+<br><br>
+  
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+
+<div class="container row" 
+*ngIf="isEmptyCOMANY()  && companyCounter ">
+
+ <div class="col-md-12">
+<h1 > خبراتي</h1>
+<table class="table">
+      <thead>
+<tr class="table-success">
+     
+          <th>    سنوات الخبره</th>
+          <th> تم اضافة بواسة</th>
+          <th>  تاريخ الخبرة</th>
+          <th>  نهاية الخبره </th>
+          <th>المسمي الوظيفي </th>
+
+        </tr>
+      </thead>
+      <tbody *ngFor="let COM of CompanyList">
+        <tr>
+
+          <td>{{COM.comanyName}}</td>
+          <td>{{COM.addby}}</td>
+          <td>{{COM.startDate}}</td>
+          <td>{{COM.endDate}}</td>
+          <td>{{COM.e_position}}</td>
+          <td>
+          <br>
+
+<br><br>
+  
+          </td>
+        </tr>
+      </tbody>
+    </table></div></div>

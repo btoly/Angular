@@ -1,0 +1,100 @@
+@import url("http://www.fontstatic.com/f=jooza");
+@import url("http://www.fontstatic.com/f=cocon-next-arabic");
+
+
+.form-group {
+    margin-left:auto;
+    margin-right:auto;
+    width:960px;
+
+}
+.vertical-center {
+    min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+    min-height: 100vh; /* These two lines are counted as one :-)       */
+  
+    display: flex;
+    align-items: center;
+  }
+
+p{
+
+    color: #003366;
+    font-size: 1em;
+    margin-top: 0.25em;
+    margin-bottom: 1em;
+    margin-left: 5;
+    margin-right: 0;
+    font-weight: bold;
+    font-family: 'cocon-next-arabic';
+}
+
+
+
+
+.card-header{
+    background-color:#eaecea;
+
+}
+
+h3{
+    color:#dd9c1e;
+}
+
+label {
+    color: #1e944b;
+  }
+.text{
+    color: #ce8dc0;
+    font-size: 1em;
+    margin-top: 0.25em;
+    margin-bottom: 1em;
+    margin-left: 5;
+    margin-right: 0;
+    font-weight: bold;
+    font-family: 'cocon-next-arabic';
+}
+
+
+
+
+
+input[type=text] {
+    border: none;
+    border-bottom: 2px solid #B8860B;
+      background-color:#f7f7f7;
+  }
+
+
+input[type=email] {
+  border: none;
+  border-bottom: 2px solid #B8860B;
+    background-color:#f7f7f7;
+}
+  input[type=number] {
+    border: none;
+    border-bottom: 2px solid #B8860B;
+      background-color:#f7f7f7;
+  }
+
+  input[type=password] {
+    border: none;
+    border-bottom: 2px solid #B8860B;
+    background-color:#f7f7f7;
+  }
+    
+  error-message{
+
+    background-color:#e02121;
+    color: #e02121;
+
+  }
+  button{
+
+
+    display: flex;
+    flex-direction: row-reverse;
+    display:      block;
+    margin-left:  auto;
+    margin-right: 0;
+    float: right;
+  }

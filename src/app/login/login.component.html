@@ -1,0 +1,146 @@
+
+
+
+
+
+
+
+
+
+<pre> 
+  
+
+
+
+
+
+
+
+
+ 
+  
+</pre>
+
+
+<div *ngIf="isLoggedIn; else loggedOut">
+
+  </div>
+  <ng-template #loggedOut>
+
+
+ 
+
+
+  <form name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
+  <h1 class="text-center mt-5"> </h1>
+  <div class="container pt-3">
+  <div class="row justify-content-sm-center">
+  <div class="col-sm-10 col-md-6">
+  <div class="card border-info">
+  <div class="card-header  text-center">  <h1> <b> تسجيل الدخول </b>   </h1>  
+  
+    <i class="material-icons lock">lock</i>
+  
+  </div>
+  <div class="card-body ">
+  <div class="row">
+  
+  <div class="col-md-12  text-center  float-center">
+
+   
+
+
+
+
+
+
+
+
+    <div class="form-group">
+
+      <div class="input">
+      </div>
+      <label > :الهوية الوطنية</label>
+      </div>
+
+
+        <input type="text"    name="username" [(ngModel)]="form.username" #username="ngModel"
+        required    size="50" id="ContentPlaceHolder1_TXT_R_NATIONAL_NUMEBR_NO" lass="form-control input-lg  text-left
+        " onkeypress="return isNumberKey(event)" >
+       
+
+      <div  class="alert-danger" *ngIf="f.submitted && username.invalid">
+        
+        <div *ngIf="username.errors.required"> مطلوب</div>
+
+   
+        </div>
+
+
+
+
+     
+
+
+
+
+<br>
+
+    <div class="form-group">
+
+      <div class="input">
+
+      </div>
+      <br>
+      <label > :كلمة المرور</label>
+    </div>
+        <input   type="password" name="password"  [(ngModel)]="form.password" #password="ngModel"
+        required minlength="6" size="50"/> 
+  
+      <div  class="alert-danger" *ngIf="f.submitted && password.invalid">
+        
+        <div *ngIf="password.errors.required">مطلوب</div>
+
+        </div>
+
+
+
+
+
+
+<br>
+  <div class="form-group">
+
+    <br>
+
+
+
+
+
+
+
+
+    <button id="Login" type="submit" class="submit"><i class="fa fa-long-arrow-right"></i></button>
+    <div *ngIf="f.submitted && isLoginFailed" class="alert alert-danger">
+   فشل الدخول: {{errorMessage}}
+    </div>
+  </div>
+
+
+  <a href="resetPassword"  class="float-right">نسيت كلمة المرور </a>
+  <br>
+  <a href="signup" class="float-right"> انشاء حساب جديد</a>
+
+  
+  </div>
+  </div>
+  </div>
+  </div>
+  
+  </div>
+  </div>
+  </div>  
+  </form>
+  </ng-template>
+
+

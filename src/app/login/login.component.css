@@ -1,0 +1,109 @@
+
+
+.submit{
+  width: 45px;
+  height: 45px;
+  display: block;
+  margin: 0 auto -15px auto;
+  background: #fff;
+  border-radius: 100%;
+  border: 1px solid #479fd5;
+  color: #479fd5;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0px 0px 0px 7px #fff;
+  transition: 0.2s ease-out;
+  
+}
+
+.card-header{
+  background:#479fd5;
+  position: relative;
+  color: #fff;
+  height: 100px;
+  width: 100%;
+  margin-bottom: 30px;
+  font: normal 14px/18px DroidSansArabic, tahoma;
+  font-family: DroidSansArabic,tahoma;
+}
+ 
+
+ 
+
+.input-item {
+  background: #fff;
+  color: #333;
+  padding: 14.5px 0px 15px 9px;
+  border-radius: 5px 0px 0px 5px;
+}
+
+
+input[id="txt-input"] {width: 250px;}
+/* focus  */
+input:focus {
+  transform: translateX(-2px);
+  border-radius: 5px;
+}
+
+
+
+button
+{
+ background-color: #479fd5;
+}
+
+button:active{
+	background: #479fd5;
+
+}
+
+ button:hover{
+		background:#479fd5;
+  color: #FFF;
+    -webkit-transition: all 0.4s;
+	transition: all 0.4s;
+}
+
+
+
+a{
+color:  #3e86b4;
+font: normal 14px/18px DroidSansArabic, tahoma;
+
+}
+
+ 
+label {
+
+
+     font-family: DroidSansArabic,tahoma;
+     font: normal 16px/20px DroidSansArabic, tahoma;
+     color: #003366;
+
+
+ 
+   }
+ 
+
+
+  input{
+
+   text-align: center;
+      box-sizing: border-box;
+      font: inherit;
+      font-family: inherit;
+      height: 46px;
+      width: 100%;
+      padding: 6px 12px;
+      font-size: 14px;
+      line-height: 1.42857143;
+      color: #555;
+      background-image: none;
+      
+      background-color: rgb(247, 247, 247);
+      border: 1px solid #e2e2e2 !important;
+      border-bottom: 2px solid #479fd5 !important;
+
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+  }

@@ -1,0 +1,61 @@
+
+
+
+
+
+
+
+
+
+<br><br>  
+  
+<div class="row">  
+  <div class="col-md-12"> 
+        <form [formGroup]="form" #searchInfo (ngSubmit)="searchForm(searchInfo)">  
+            <table>  
+                <tr>  
+                    <td> <input type="text" formControlName="name" placeholder="هوية الطالب " class="form-control"> </td>   
+                    <td><button class="btn btn-primary hidden-xs">بحث</button></td>  
+                </tr>  
+            </table>  
+        </form>  
+    </div>  
+</div>  
+
+<br>
+<br>
+
+
+
+<a class="btn " (click)="addCertification()">اضافة شهادة طالب جديد</a>
+<div class="container row">
+  <div class="col-md-12">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>  الهوية الوطنية </th>
+      
+          <th>المزيد</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let Certifications of Certifications">
+
+          <td>{{Certifications.username}}</td>
+          <!-- <td>{{Certifications.name}}</td> -->
+
+          <td>
+            <button type="button" class="btn btn-primary" (click)="viewProfiles(Certifications.id)"> تفاصيل </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+    <app-add-information-studant *ngIf="action === 'add'" [certification]="selectedCertification" (bookAddedEvent)="refreshData()"></app-add-information-studant>
+   <app-view-information-studant *ngIf="action === 'view'" [certification]="selectedCertification" (ProfileDeletedEvent)="refreshData()"></app-view-information-studant>
+    <app-add-information-studant *ngIf="action === 'edit'" [certification]="selectedCertification" (bookAddedEvent)="refreshData()"></app-add-information-studant>
+    <!-- <information-studant        *ngIf="action === 'view'" [certification]="selectedCertification" (ProfileDeletedEvent)="refreshData()>"></information-studant> -->
+
+</div>

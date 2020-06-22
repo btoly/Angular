@@ -1,0 +1,214 @@
+
+<br>
+<br>
+
+<br>
+<br>
+
+
+
+
+<div class="jumbotron vertical-center" >
+
+
+    <form >
+    
+    <br>
+
+    <div class="container py-6">
+    <div class="row">
+    <div class="mx-auto col-sm-12">
+    <p class="text-right">
+    الخطوة الأولى - إنشاء البيانات الرئيسية  
+    </p>
+    <hr>
+    
+    <div class="card   text-right">
+    <div class="card-header">
+    <h3>
+    البيانات التعريفية
+    </h3>
+    </div>
+    
+    <div class="card-body  text-right">
+    <div class="form-row">
+
+    
+ <div class="form-group col-md-6">
+
+        <label for="username">رقم  المنشئه </label>
+        <input type="text" class="form-control" name="username" [(ngModel)]="user.username" #username="ngModel"
+        required
+        minlength="10"
+        />
+      
+        
+        </div>
+ 
+  
+    
+    
+    
+    
+    <div class="form-group col-md-6">
+
+    <label for="name"> إسم  المنشئه </label>
+    <input type="text" class="form-control"  id="name" name="name"   [(ngModel)]="user.name" #name="ngModel" required />
+
+
+    </div>
+
+    
+    
+  
+
+    
+
+    <div class="form-group col-md-6" style="text-align:right; margin:0px auto 0px auto;">
+      <label for="select_role" > نوع القطاع  </label>
+      <input type="text" class="form-control"  id="select_role" name="select_role" [(ngModel)]="user.select_role" #select_role="ngModel" required />
+
+  
+ 
+
+
+
+      </div>
+
+    <br>
+
+    
+  </div>
+   
+    <!-- //end row -->
+    </div>
+    
+    <!-- //end card-body -->
+    
+    </div> 
+    
+    <!--   end container py-6 -->
+    
+    
+    </div> 
+    <!--  end row -->
+    
+    
+    </div> 
+    <!-- end  mx-auto col-sm-12 -->
+    
+    </div>
+    
+    <!-- end card   text-right -->
+    
+    
+    <br>
+    
+    <div class="card text-right">
+    <div class="card-header">
+    <h3>
+    بيانات الإتصال
+    </h3>
+    </div>
+    <!--   end card-header-->
+    <div class="card-body">
+    <br>
+    
+    
+    
+    <div class="form-group">
+    <label for="email">البريد الاكتروني</label>
+    <input
+    type="email"
+    class="form-control"
+    name="email"
+    [(ngModel)]="user.email"
+    required
+    
+    #email="ngModel"
+    />
+
+ 
+
+    </div>
+    
+    
+    
+    
+    
+    <div class="form-group">
+    <label for="phone">رقم الجوال </label>
+    <input type="number" class="form-control"   name="phone" [(ngModel)]="user.phone" #phone="ngModel"
+    required       minlength="10" />
+
+     
+      </div>
+
+    
+    
+    
+    
+    
+    </div>
+    
+    </div>
+    <br>
+    
+    
+    
+  
+  <div class="card text-right">
+    <div class="card-header">
+    <h3>
+    بيانات الدخول
+    </h3>
+    </div>
+  <!--   end card-header-->
+  <div class="card-body">
+
+    <div class="form-group">
+        <label for="password">كلمة المرور</label>
+        <input
+        type="password"
+        class="form-control"
+        name="password"
+        [(ngModel)]="user.password"
+        required
+        minlength="6"
+        #password="ngModel"
+      />
+
+   
+
+    </div>
+
+    
+    
+    
+    <br>
+
+
+
+
+  
+  <!--   end card-body-->
+  </div>
+  
+
+
+</div>
+
+
+
+
+<button class="btn btn-primary btn-block"     (click)="EDite()"> تعديل </button>
+
+  
+ 
+
+
+</form>
+
+
+</div>
+

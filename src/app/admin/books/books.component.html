@@ -1,0 +1,31 @@
+<h1> Books</h1>
+<a class="btn btn-primary mb-3" (click)="addProfile()">Add New profile</a>
+<div class="container row">
+  <div class="col-md-6">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>profile Name</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let profile of Profiles">
+          <td>{{profile.id}}</td>
+          <td>{{profile.name}}</td>
+          <td>{{profile.NationalIdentity}}</td>
+          
+          <td>
+            <button type="button" class="btn btn-primary" (click)="viewProfiles(profile.id)"> Show Details</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="col-md-6">
+    <app-addbook *ngIf="action === 'add'" [profile]="selectedProfile" (bookAddedEvent)="refreshData()"></app-addbook>
+    <app-viewbook *ngIf="action === 'view'" [profile]="selectedProfile" (ProfileDeletedEvent)="refreshData()"></app-viewbook>
+    <app-addbook *ngIf="action === 'edit'" [profile]="selectedProfile" (bookAddedEvent)="refreshData()"></app-addbook>
+  </div>
+</div>

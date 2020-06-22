@@ -1,0 +1,38 @@
+/* Required for full background image */
+
+html,
+body,
+header,
+.view {
+  min-height: 100vh;
+}
+
+@media (max-width: 740px) {
+  html,
+  body,
+  header,
+  .view {
+    height: 1100px;
+  }
+}
+@media (min-width: 800px) and (max-width: 850px) {
+  html,
+  body,
+  header,
+  .view {
+    height: 700px;
+  }
+}
+
+
+
+
+p{
+
+  float: center
+  ;
+}
+
+h6 {
+  line-height: 1.7;
+}

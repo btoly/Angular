@@ -1,0 +1,74 @@
+<pre> 
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+  
+</pre>
+  <h1>Us Admin</h1>
+  <a href="registeradmain" class="float-right" >   اضافه قطاع جديد </a>
+  <div class="container row">
+      <div   class="col-md-6">
+      <table class="table">
+        <thead>
+        <tr>
+        <th>ID</th>
+        <th>الهوية الوطنية</th>
+        <th>الاسم الاول </th>
+        <th>اسم الاب</th>
+        <th>اسم الجد</th>
+        <th>اسم العايلة</th>
+        <th>البريد الاكتروني</th>
+        <th>رقم الجوال </th>
+        <th></th>
+       
+      </tr>
+      </thead>
+      <tbody>
+
+        <tr *ngFor="let SignUpInfo of users" >
+   
+            <td>{{SignUpInfo.id}}</td>
+            <td>{{SignUpInfo.name}}</td>
+            <td>{{SignUpInfo.username}}</td>
+            <td>{{SignUpInfo.email}}</td>
+            <td>{{SignUpInfo.role}}</td>
+            <td>{{SignUpInfo.password}}</td>
+            <td>{{SignUpInfo.last_name}}</td>
+            <td>{{SignUpInfo.father_Name}}</td>
+        
+       
+          <td><button type="button" class="btn btn-primary" (click)="viewUser(SignUpInfo.id)">Show Details</button></td>
+  
+          <td>  
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div   class="col-md-6">
+    <div class="col-md-6">
+        <app-user-details  *ngIf="action === 'view'" [user]="selectedUser" (userDeletedEvent)="refreshData()"></app-user-details>
+
+        <app-register-admain *ngIf="action === 'edit'" [user]="selectedUser" (AddedEvent)="refreshData()"></app-register-admain>
+
+
+
+      </div>
+  </div>
+</div> 

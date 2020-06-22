@@ -1,0 +1,298 @@
+<br>
+<div class="container py-6">
+<div class="row">
+<div class="mx-auto col-sm-12">
+
+<p class="text-right">
+الخطوة الأولى - إنشاء البيانات الرئيسية لمقدم الطلب
+</p>
+<hr>
+<div class="card   text-right">
+<div class="card-header">
+<h3>
+البيانات التعريفية
+</h3>
+</div>
+<!--   end card-header -->
+
+<div class="card-body">
+  <form [formGroup]="loginForm">
+<div class="form-row">
+<div class="form-group col-md-6">
+<label for="birthday">تاريخ الميلاد</label>
+<br>
+<input type="date" id="birthday" name="birthday"><br><br>
+</div>
+<br>
+
+
+
+
+<div class="form-group col-md-6">
+  <div class="form-group">
+  <label for="Input_national_ID">رقم بطاقة الأحوال </label>
+  <input type="number"   class="form-control" 
+   formControlName="Input_national_ID" 
+  id="Input_national_ID"/>
+</div>
+ <div class="error-messages">
+  <ng-container *ngFor="let error of error_messages.Input_national_ID">
+    <div class="error-message"    class="alert alert-danger" role="alert" *ngIf="loginForm.get('Input_national_ID').hasError(error.type) && (loginForm.get('Input_national_ID').dirty || loginForm.get('Input_national_ID').touched)">
+      {{ error.message }}
+    </div>
+  </ng-container>
+</div>
+
+</div>
+</div>
+
+
+
+
+<div class="form-row">
+<div class="form-group col-md-6">
+<div class="form-group">
+<label for="InputFhther"> الأب </label>
+<input type="text" class="form-control" id="InputFhther"  formControlName="InputFhther"   />
+</div>
+<!-- end form-group" -->
+<div class="error-messages">
+<ng-container *ngFor="let error of error_messages.InputFhther">
+<div class="error-message"   class="alert alert-danger" role="alert"  *ngIf="loginForm.get('InputFhther').hasError(error.type) && (loginForm.get('InputFhther').dirty || loginForm.get('InputFhther').touched)">
+      {{ error.message }}
+</div>
+<!-- end error-message" -->
+</ng-container>
+</div>
+</div>
+
+
+
+
+
+
+<div class="form-group col-md-6">
+  <div class="form-group">
+  <label for="Input_Frist_Name"> الاسم الأول </label>
+  <input type="text" class="form-control"     id="Input_Frist_Name"   formControlName="Input_Frist_Name"   >
+</div>
+<!-- end form-group" -->
+<div class="error-messages">
+  <ng-container *ngFor="let error of error_messages.Input_Frist_Name">
+  <div class="error-message"   class="alert alert-danger" role="alert" *ngIf="loginForm.get('Input_Frist_Name').hasError(error.type) && (loginForm.get('Input_Frist_Name').dirty || loginForm.get('Input_Frist_Name').touched)">
+        {{ error.message }}
+  </div>
+  <!-- end error-message" -->
+  </ng-container>
+  </div>
+  </div>
+  
+
+  <br>
+</div>
+
+
+
+
+<div class="form-row">
+
+<div class="form-group col-md-6">
+  <div class="form-group">
+<label for="InputFamily"> العائلة </label>
+<input type="text" class="form-control" id="InputFamily"  formControlName="InputFamily" />
+</div>
+<!-- end form-group" -->
+<div class="error-messages">
+  <ng-container *ngFor="let error of error_messages.InputFamily">
+  <div class="error-message" class="alert alert-danger" role="alert" *ngIf="loginForm.get('InputFamily').hasError(error.type) && (loginForm.get('InputFamily').dirty || loginForm.get('InputFamily').touched)">
+        {{ error.message }}
+  </div>
+  <!-- end error-message" -->
+  </ng-container>
+  </div>
+  </div>
+
+
+
+<div class="form-group col-md-6">
+  <div class="form-group">
+  <label for="Inputgrandfather"> الجد </label>
+  <input type="text" class="form-control"  id="Inputgrandfather" formControlName="Inputgrandfather" />
+</div>
+
+ <!-- end form-group" -->
+<div class="error-messages">
+  <ng-container *ngFor="let error of error_messages.Inputgrandfather">
+  <div class="error-message"  class="form-control" class="alert alert-danger"  *ngIf="loginForm.get('Inputgrandfather').hasError(error.type) && (loginForm.get('Inputgrandfather').dirty || loginForm.get('Inputgrandfather').touched)">
+        {{ error.message }}
+  </div>
+  <!-- end error-message" -->
+  </ng-container>
+</div>
+</div>
+</div>
+<br>
+<strong>الجنس</strong>
+<br>
+<div class="form-check form-check-inline">
+<input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="a" checked>
+<label class="form-check-label" for="exampleRadios1">
+أنثى
+</label>
+</div>
+<div class="form-check form-check-inline">
+<input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="b">
+<label class="form-check-label" for="exampleRadios2">
+ذكر
+</label>
+
+</div>
+<br>
+</form>
+</div>
+
+
+<!--  end card-footer -->
+
+
+
+<hr>
+
+
+
+<!--    card   2 -->
+
+
+<div class="card text-right">
+<div class="card-header">
+<h3>
+بيانات الإتصال
+</h3>
+</div>
+<!--   end card-header-->
+
+<div class="card-body">
+  <form [formGroup]="loginForm">
+
+  <br>
+
+<!--   <div *ngIf="(submitted||f.contact.touched) && f.contact.invalid" class="error-msg">
+    <div *ngIf="f.contact.errors.required">contact  is required</div>
+    <div *ngIf="f.contact.errors.pattern">Please enter 10 digit Number</div> -->
+
+<!-- <div class="form-group"> 
+<label for="Inputphone"> رقم الجوال </label>
+<input type="text" class="form-control"  formControlName="Inputphone"     ngModel required  id="Inputphone"   #Inputphone /> 
+<div *ngIf="userForm.get('Inputphone').touched && userForm.get('Inputphone').invalid" class="alert alert-danger">
+مطلوب</div> 
+  <div *ngIf="userForm.get('Inputphone').errors.pattern">Please enter 10 digit Number</div> 
+  <p *ngIf="userForm.get('InputEmail1').errors?.email">الرجاء ادخال ايميل صحيح</p>
+<br> -->
+
+<div class="form-group">
+  <label for="InputEmail1"> البريد الإلكتروني </label>
+  <input type="text"   class="form-control"  formControlName="InputEmail1" id="InputEmail1" />
+</div>
+<!-- end form-group -->
+<div class="error-messages">
+  <ng-container *ngFor="let error of error_messages.InputEmail1">
+    <div class="error-message" class="form-control" class="alert alert-danger"   *ngIf="loginForm.get('InputEmail1').hasError(error.type) && 
+(loginForm.get('InputEmail1').dirty || loginForm.get('InputEmail1').touched)">
+      {{ error.message }}
+    </div>
+    <!-- end error-messages -->
+  </ng-container>
+</div>
+
+
+  <br>
+
+
+</form>
+
+<!--   end card-body-->
+
+
+<hr>
+
+<!--    card  3 -->
+
+
+<div class="card text-right">
+  <div class="card-header">
+  <h3>
+  بيانات الدخول
+  </h3>
+  </div>
+<!--   end card-header-->
+<div class="card-body">
+  <form [formGroup]="loginForm">
+  <div class="form-group">
+<label for="Inputpassword"> كلمة المرور </label>
+<input type="text" class="form-control" id="Inputpassword"  formControlName="Inputpassword"  />
+</div>
+<div class="error-messages">
+  <ng-container *ngFor="let error of error_messages.password">
+    <div class="error-message" class="form-control" class="alert alert-danger"  *ngIf="loginForm.get('password').hasError(error.type) && (loginForm.get('password').dirty || loginForm.get('password').touched)">
+      {{ error.message }}
+    </div>
+  </ng-container>
+</div>
+
+
+
+<div class="form-group">
+<label for="confirmpassword"> تأكيد كلمة المرور </label>
+<input type="text" class="form-control" id="confirmpassword" formControlName="confirmpassword" />
+</div>
+
+
+<div class="error-messages">
+  <ng-container *ngFor="let error of error_messages.confirmpassword">
+    <div class="error-message"  class="form-control" class="alert alert-danger"  *ngIf="loginForm.get('confirmpassword').hasError(error.type) && (loginForm.get('confirmpassword').dirty || loginForm.get('confirmpassword').touched)">
+      {{ error.message }}
+    </div>
+  </ng-container>
+</div>
+
+</form>
+</div>
+<!--   end card-body-->
+</div>
+
+
+
+
+
+
+
+
+<hr>
+<!--    card  4 -->
+
+<div class="card text-right">
+<div class="card-header">
+<h3>
+تعهد إلكتروني
+</h3>
+</div>
+<!--   end card-header-->
+
+<div class="card-body">
+<form>
+
+  <pre>
+    تعهد بصحة البيانات المدخلة و اذا تبين خلاف ذلك عند المطابقة سيتم استبعاد الطلب و الخروج من 
+  </pre>
+  
+</form>
+</div>
+
+<!--   end card-body-->
+
+</div>
+</div>
+<button    type="submit"   class="btn btn-secondary btn-lg" [disabled]="!loginForm.valid">تسجيل</button>
+</div>
+
+</div>

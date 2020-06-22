@@ -1,0 +1,76 @@
+
+  
+
+<br><br>
+<div *ngIf=Copanytion>
+
+<div class="row">  
+<div class="col-md-12">
+<table >
+<tr>
+
+   
+        <br>
+        <td>{{Copanytion.username}}</td>
+        <br>
+        <td> :  الهوية الوطنية</td>
+        <br>
+    </tr>
+    <br>
+  
+
+
+    <tr>
+        <br>
+        <td>{{Copanytion.comanyName}}</td>
+        <br>
+        <td>:عدد سنوات الخبرة</td>
+        </tr>
+         <br>
+
+         <tr>
+        <br>
+        <td>{{Copanytion.startDate}}</td>
+        <br>
+        <td> : بداية الخبره </td>
+    </tr>
+    <br>
+    <tr>
+
+
+        <br>
+        <td>{{Copanytion.endDate}}</td>
+        <br>
+        <td> :  نهاية الخبرة </td>
+    </tr>
+    <br>
+    <tr>
+
+        <br>
+        <td>{{Copanytion.e_position}}</td>
+        <br>
+        <td>: المسمى الوظيفي </td>
+    </tr>
+    <br>
+    <tr>
+
+        <br>
+        <td>{{Copanytion.addby}}</td>
+        <br>
+        <td> :تم اضافة بواسطة </td>
+    </tr>
+    <br>
+</table>
+<br>
+<br>
+
+
+<!-- <img src="{{Copanytion.retrievedImage}}" height="200" width="200"> -->
+<br><br>
+
+<a class="btn btn-small btn-danger" (click)="deleteCertification()"><i class="fas fa-trash"></i></a> 
+    
+
+<a class="btn btn-small btn-warning" (click)="editCertification()">    <i class="fa fa-pencil-square" aria-hidden="true"></i></a>
+</div>
+</div></div>

@@ -1,0 +1,169 @@
+
+
+<pre>
+
+
+
+ 
+
+
+
+  
+
+  
+</pre>
+
+<a href="registeradmain" class="float-right" >   اضافه قطاع جديد </a>
+
+
+<br>
+<br>
+
+<br>
+<br>
+<div class="container row">
+    <div   class="col-md-6">
+    <table class="table">
+      <thead>
+
+      <tr>
+
+      <th> رقم الشركة </th>
+      <th> إسم الشركة </th>
+      <th>  تفاصيل </th>
+    </tr>
+
+
+    </thead>
+    <tbody> 
+
+
+
+  <tr *ngFor="let SignUpInfo of users | paginate: { itemsPerPage: 3, currentPage: cp,    totalItems: total  }">
+                 
+    <ng-template [ngIf]="isRoleComany(SignUpInfo)">
+
+      
+      <td>{{SignUpInfo.username}}</td>
+        <td>{{SignUpInfo.name}}</td>
+
+
+
+  <td><button type="button" class="btn btn-primary" (click)="viewUser(SignUpInfo.id)">المزيد</button></td>
+
+</ng-template>
+    </tr>
+
+
+
+
+    </tbody>
+  </table>
+  
+
+
+  <pagination-controls (pageChange)="cp = $event"
+  
+  previousLabel="السابق"
+                      nextLabel="التالي"
+  
+  ></pagination-controls>
+
+  <br>
+  <br>
+  
+  <br>
+  <br>
+
+
+
+
+
+<div   class="col-md-6">
+  <div class="col-md-6">
+ <app-user-details  *ngIf="action === 'view'" [user]="selectedUser" (userDeletedEvent)="refreshData()"></app-user-details>
+ <!-- <app-register-admain *ngIf="action === 'edit'" [user]="selectedUser" (AddedEvent)="refreshData()"></app-register-admain> -->
+ <app-edit-user   *ngIf="action === 'edit'" [user]="selectedUser" (AddedEvent)="refreshData()" ></app-edit-user>   
+
+    </div>
+</div>
+</div> 
+
+
+
+
+<!-- 
+
+
+
+
+
+
+<a href="registeradmain" class="float-right">   اضافه قطاع جديد </a>
+
+
+<div class="container row" ">
+    <div   class="col-md-6">
+    <table class="table">
+      <thead>
+
+      <tr>
+      <th> إسم الشركة
+
+      </th>
+      <th> رقم الشركة</th>
+      <th> البريد  </th>
+      <th> Action  </th>
+    </tr>
+
+
+    </thead>
+    <tbody> 
+
+  <tr *ngFor="let SignUpInfo of users">
+
+
+
+
+
+
+    <ng-template [ngIf]="isRoleComany(SignUpInfo)">
+
+
+
+        
+      
+      <td>{{SignUpInfo.email}}</td>
+        <td>{{SignUpInfo.name}}</td>
+        <td>{{SignUpInfo.username}}</td>
+
+
+  <td><button type="button" class="btn btn-primary" (click)="viewUser(SignUpInfo.id)">المزيد</button></td>
+
+</ng-template>
+    </tr>
+
+
+
+
+    </tbody>
+  </table>
+</div>
+<div   class="col-md-6">
+  <div class="col-md-6">
+      <app-user-details  *ngIf="action === 'view'" [user]="selectedUser" (userDeletedEvent)="refreshData()"></app-user-details>
+   
+
+    </div>
+</div>
+</div> 
+
+
+
+
+
+
+
+
+
+ -->
